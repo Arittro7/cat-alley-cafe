@@ -1,10 +1,12 @@
 import logo from '../../assets/logo.png'
+import logo2 from '../../assets/logo2.png'
 const Navbar = () => {
 
   const navOptions = <>
-  <li><a>Home</a></li>
+  <li><a href='#home'>Home</a></li>
   <li><a>About</a></li>
   <li><a>Blog</a></li>
+  <li><a href='#contact'>Contact</a></li>
   </>
 
   return (
@@ -32,8 +34,8 @@ const Navbar = () => {
         {navOptions}
       </ul>
     </div>
-    <div className='flex'>
-    <img className='w-9 bg-white rounded-full' src={logo} alt="" />
+    <div className='flex items-center gap-2'>
+    <img className='w-9 bg-white rounded-full' src={logo2} alt="" />
     <p className="text-xl font-semibold">CatAlley<span className="text-green-600">CAFE</span></p>
     </div>
   </div>

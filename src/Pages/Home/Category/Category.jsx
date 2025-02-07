@@ -15,10 +15,18 @@ import slide2 from "../../../assets/home/slide2.jpg"
 import slide3 from "../../../assets/home/slide3.jpg"
 import slide4 from "../../../assets/home/slide4.jpg"
 import slide5 from "../../../assets/home/slide5.jpg"
+import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
 
 const Category = () => {
   return (
-    <div>
+    <div className=' '>
+      <SectionTitle
+      subHeading={"From 9am to 10pm"}
+      heading={"Online Order"}
+      >
+      </SectionTitle>
+      
+      <section>
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
@@ -50,6 +58,7 @@ const Category = () => {
         <h1 className='uppercase text-2xl lg:text-3xl -mt-14 text-white bg-black w-full py-2 bg-opacity-40'>Salad</h1>
         </SwiperSlide>
       </Swiper>
+      </section>
     </div>
   );
 };
