@@ -44,7 +44,7 @@
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "dessert",
+        "category": "dessert, chef",
         "price": 12.5
     },
     {
@@ -100,7 +100,7 @@
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
-        "category": "pizza",
+        "category": "pizza, chef",
         "price": 9.5
     },
     {
@@ -454,5 +454,29 @@
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
         "category": "soup",
         "price": 10.5
-    }
+    },
+    {
+        "_id": "643d155b2c4774f05c36ee8d",
+        "name": "Beef Wellington",
+        "recipe": "Beef tenderloin wrapped in puff pastry with mushroom duxelles, served with a red wine reduction sauce",
+        "image": "https://images.unsplash.com/photo-1546964053-d018e345e490?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "chef",
+        "price": 25.0
+      },
+      {
+        "_id": "643d155b2c4774f05c36ee8e",
+        "name": "Lobster Thermidor",
+        "recipe": "Lobster meat cooked in a creamy wine sauce, stuffed back into the lobster shell, and baked with cheese",
+        "image": "http://images.unsplash.com/photo-1657618217273-00513772e15d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "chef",
+        "price": 35.0
+      },
+      {
+        "_id": "643d155b2c4774f05c36ee8f",
+        "name": "Ratatouille",
+        "recipe": "Provencal vegetable stew made with eggplant, zucchini, bell peppers, onions, tomatoes, and herbs",
+        "image": "https://plus.unsplash.com/premium_photo-1713635953194-ab8a625b2477?q=80&w=1810&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "chef",
+        "price": 18.0
+      }
 ]
