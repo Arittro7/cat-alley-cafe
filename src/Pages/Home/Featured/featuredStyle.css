@@ -1,4 +1,23 @@
-.featured-item{
+.featured-item {
   background-image: url(../../../assets/home/featured.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;  /* Needed for absolute positioning of overlay */
+}
 
+.featured-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Black overlay with 70% opacity */
+  z-index: 1;
+}
+
+.featured-item > * {
+  position: relative; /* Brings content above the overlay */
+  z-index: 2;
 }
