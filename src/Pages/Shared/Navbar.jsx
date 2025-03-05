@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
 import logo2 from "../../assets/logo2.png";
 const Navbar = () => {
   const navOptions = (
     <>
       <li>
-        <a href="#home">Home</a>
+        <Link to={"/"}>Home</Link>
+      </li>
+      <li>
+        <Link to="/menu">Menu</Link>
       </li>
       <li>
         <a>About</a>

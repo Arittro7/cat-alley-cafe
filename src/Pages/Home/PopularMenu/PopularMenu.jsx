@@ -4,13 +4,13 @@ import MenuItems from "../../Shared/MenuItems/MenuItems";
 
 const PopularMenu = () => {
   const [menu, setMenu] = useState([]);
-  const [loading, setLoading] = useState(true); // ✅ Loading state for better UX
-  const [error, setError] = useState(null); // ✅ Error handling state
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const response = await fetch("/menu.json"); // ✅ Ensure `menu.json` is in `public/`
+        const response = await fetch("/menu.json"); 
         if (!response.ok) {
           throw new Error("Failed to load menu.json");
         }
@@ -18,14 +18,14 @@ const PopularMenu = () => {
         const popularItems = data.filter((item) => item.category === "popular");
         setMenu(popularItems);
       } catch (err) {
-        setError(err.message); // ✅ Store error message
+        setError(err.message); 
       } finally {
-        setLoading(false); // ✅ Stop loading
+        setLoading(false);
       }
     };
 
     fetchMenu();
-  }, []); // ✅ Runs only once when component mounts
+  }, []); 
 
   return (
     <section className="my-20">

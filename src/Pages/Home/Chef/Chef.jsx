@@ -13,7 +13,7 @@ const Chef = () => {
         setRecommends(chefRecommends);
       })
       .catch((error) => console.error('Error fetching menu:', error));
-  }, []); // Runs only once when the component mounts
+  }, []); 
 
   return (
     <div className="my-20 container w-[1380px] ">
