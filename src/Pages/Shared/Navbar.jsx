@@ -99,7 +99,8 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <p className="text-xl font-semibold mr-5 text-green-500">{user?.displayName}</p>
+          {/* <a className="btn">Button</a> */}
         </div>
       </div>
     </div>
