@@ -1,17 +1,46 @@
 import Swal from "sweetalert2";
 import useAuth from "../../../hooks/useAuth";
 import { useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { Bounce, toast } from 'react-toastify';
 
 const FoodCard = ({item}) => {
-  const {name, recipe, image, price} = item
+  const {name, recipe, image, price, _id} = item
   const {user} = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
+
+  
 
   const handleFoodCart =(food) =>{
     console.log(food);
     if(user && user.email){
       //Todo: Send data to the server
+      console.log(user.email , food);
+      const cartItem ={
+        foodId : _id,
+        email: user.email,
+        name,
+        image,
+        price
+      }
+      axios.post('http://localhost:5000/carts', cartItem)
+      .then(data =>{
+        console.log(data.data);
+        if(data.data.insertedId){
+          toast.success('😋 Food added to the cart', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+            });
+        }
+      })
     } else {
       Swal.fire({
         title: "Please Login to Order",
