@@ -3,6 +3,7 @@ import logo2 from "../../assets/logo2.png";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
   const { user, Logout } = useContext(AuthContext);
@@ -99,7 +100,13 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
-          <p className="text-xl font-semibold mr-5 text-green-500">{user?.displayName}</p>
+          <button className="btn mr-2">
+            <FaShoppingCart className="text-2xl" />
+             <div className="badge badge-sm badge-secondary">+0</div>
+          </button>
+          <p className="text-xl font-semibold mr-5 text-green-500">
+            {user?.displayName}
+          </p>
           {/* <a className="btn">Button</a> */}
         </div>
       </div>
